@@ -27,23 +27,28 @@ w = df['VAR4'].tolist()
 print('\n',x,'\n',y,'\n',z,'\n',w)
 
 # To matrix
+
 pc_dataset = np.vstack([x, y, z, w]).T
 print(pc_dataset.shape)
 
-# Build the model
+# Model building
+
 pc = PC()
 pc.learn(pc_dataset)
 
-# Print out the learned matrix
+# Print learned matrix
+
 print(pc.causal_matrix)
 
 learned_graph = nx.DiGraph(pc.causal_matrix)
 
-# Relabel the nodes
+# Relabel nodes
+
 MAPPING = {k: v for k, v in zip(range(4), ['X', 'Y', 'Z', 'W'])}
 learned_graph = nx.relabel_nodes(learned_graph, MAPPING, copy=True)
 
 # Plot the graph
+
 nx.draw(
     learned_graph, 
     with_labels=True,
