@@ -1,11 +1,6 @@
 # Causal DAG (CASTLE)
 Python script to learn a causal graph (DAG) from tabular data stored in Excel using the [python-castle] library. Supports multiple algorithms (PC, GES, GOLEM, ICALiNGAM), saves the learned adjacency matrix and a DAG plot, and lets you choose the variables/columns to include.
 
-Requirements:
-- Python 3.9+
-- pandas, numpy, networkx, matplotlib, openpyxl
-- python-castle (CASTLE causal discovery)
-
 Arguments:
 
 --input Path to .xlsx file
