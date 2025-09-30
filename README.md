@@ -7,6 +7,7 @@ Requirements:
 - python-castle (CASTLE causal discovery)
 
 Arguments:
+
 --input Path to .xlsx file
 
 --cols Variable names to include (space-separated). If omitted, use --col-indexes
